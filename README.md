@@ -1,1 +1,1 @@
-# FlutterSample Code for faster starting a app
+# FlutterSample Code for faster starting development
