@@ -11,7 +11,6 @@ class HomePage extends StatelessWidget {
         child: Column(
           children: [
             Text('Home Page'),
-            Text('Home Page'),
             RaisedButton(
               onPressed: () => Navigator.of(context)
                   .pushNamed('/login', arguments: 'pass any data to that page'),
