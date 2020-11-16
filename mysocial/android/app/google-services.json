@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "108068881904",
+    "firebase_url": "https://mysocial-61d8f.firebaseio.com",
+    "project_id": "mysocial-61d8f",
+    "storage_bucket": "mysocial-61d8f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:108068881904:android:c57add5289ab5e3c824935",
+        "android_client_info": {
+          "package_name": "com.insoulit.mysocial"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "108068881904-mka7lohc6jhtbhgcn9qqn7mnpbis9hn7.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.insoulit.mysocial",
+            "certificate_hash": "bd4aa8c292679762c9207927b33d1977d4bc0e45"
+          }
+        },
+        {
+          "client_id": "108068881904-it36ml25acidjjokdhc9m0b9334a02pe.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDCUhSCjLBUA9z0p9zcX4Jb_1rJBpp3ATM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "108068881904-it36ml25acidjjokdhc9m0b9334a02pe.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
