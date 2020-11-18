@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:mysocial/pages/auth/login.dart';
+import 'package:mysocial/pages/auth/Login/login_screen.dart';
+import 'package:mysocial/pages/auth/Signup/signup_screen.dart';
 import 'package:mysocial/pages/dashboard/dashboard.dart';
 import 'package:mysocial/pages/welcome.dart';
 
@@ -8,25 +9,15 @@ class RouteGenerator {
     // Getting arguments passed in while calling Navigator.pushNamed
     // String arg = settings.arguments;
 
-    bool isAuth = true;
-
     switch (settings.name) {
-      case '/':
+      case '/welcome':
         return MaterialPageRoute(builder: (_) => WelcomePage());
-
-      // case '/login':
-      //   if (isAuth) {
-      //     return MaterialPageRoute(builder: (_) => Dashboard());
-      //   }
-      //   return MaterialPageRoute(builder: (_) => LoginPage());
-
+      case '/login':
+        return MaterialPageRoute(builder: (_) => LoginScreen());
+      case '/signup':
+        return MaterialPageRoute(builder: (_) => SignUpScreen());
       case '/dashboard':
         return MaterialPageRoute(builder: (_) => Dashboard());
-
-      // case '/login':
-      //   return MaterialPageRoute(builder: (_) => LoginPage(passdata: arg));
-      // case '/signup':
-      //   return MaterialPageRoute(builder: (_) => SignupPage());
       default:
         return _errorRoute();
     }

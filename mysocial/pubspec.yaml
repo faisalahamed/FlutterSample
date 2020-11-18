@@ -29,6 +29,8 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.0
   route_generator: 
+  splashscreen: ^1.3.4
+  flutter_svg: 
 
   firebase_core: ^0.5.2
   cloud_firestore: ^0.14.3
@@ -104,3 +106,5 @@ flutter:
     - assets/images/search.svg
     - assets/images/activity_feed.svg
     - assets/images/no_content.svg
+    - assets/images/auth/
+    - assets/icons/

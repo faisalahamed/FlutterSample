@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:mysocial/pages/auth/login.dart';
 import 'package:mysocial/pages/dashboard/dashboard.dart';
+import 'package:mysocial/pages/login_signup/login_signup_page.dart';
 
 class WelcomePage extends StatefulWidget {
   @override
@@ -13,7 +13,6 @@ class _WelcomePageState extends State<WelcomePage> {
 
   @override
   Widget build(BuildContext context) {
-    //TODO: splash Screen
-    return isAuth ? Dashboard() : LoginPage();
+    return isAuth ? Dashboard() : LoginSignupPage();
   }
 }
