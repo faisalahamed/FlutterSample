@@ -1,0 +1,14 @@
+  DateTime date=new DateTime.now();
+  DateTime date2=DateTime(2021,1,1);
+  var due=date2.difference(date);
+  print(due);
+  var day=due.inDays.remainder(24).toString();
+  var hour=due.inHours.remainder(60).toString();
+  var min=due.inMinutes.remainder(60).toString();
+  var sec=due.inSeconds.remainder(60).toString();
+  var mili=due.inMilliseconds.remainder(1000).toString();
+  print(day);
+  print(hour);
+  print(min);
+  print(sec);
+  print(mili);

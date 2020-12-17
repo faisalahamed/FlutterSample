@@ -1,5 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:giganet/data/ftp_list.dart';
+import 'package:giganet/data/music_list.dart';
+import 'package:giganet/data/radio_list.dart';
+import 'package:giganet/data/website_list.dart';
 import 'package:giganet/home/widget/slider.dart';
+
+import '../data/tvList.dart';
 
 class HomeDesktop extends StatelessWidget {
   @override
@@ -22,17 +28,27 @@ class HomeDesktop extends StatelessWidget {
             SizedBox(
               height: 10.0,
             ),
-            HomeSlider(),
+            HomeSlider(tvList),
             titleBar('Websites'),
             SizedBox(
               height: 10.0,
             ),
-            HomeSlider(),
+            HomeSlider(websiteList),
             titleBar('FTP Server'),
             SizedBox(
               height: 10.0,
             ),
-            HomeSlider(),
+            HomeSlider(ftpList),
+            titleBar('Music Server'),
+            SizedBox(
+              height: 10.0,
+            ),
+            HomeSlider(musicList),
+            titleBar('Radio Server'),
+            SizedBox(
+              height: 10.0,
+            ),
+            HomeSlider(radioList),
           ],
         ),
       ),

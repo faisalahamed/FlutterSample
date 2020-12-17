@@ -1,9 +1,10 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
-import 'package:giganet/data/tvList.dart';
-import 'package:giganet/website/website.dart';
+import 'package:giganet/webview/my_web_view.dart';
 
 class HomeSlider extends StatelessWidget {
+  final List<Map<String, String>> itemList;
+  HomeSlider(this.itemList);
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -18,7 +19,7 @@ class HomeSlider extends StatelessWidget {
               enlargeCenterPage: true,
             ),
             // items: imageSliders,
-            items: tvList
+            items: itemList
                 .map((item) => Container(
                       child: GestureDetector(
                         onTap: () {
@@ -27,7 +28,7 @@ class HomeSlider extends StatelessWidget {
                               context,
                               MaterialPageRoute(
                                   builder: (context) =>
-                                      WebSite(item['url'], item['title'])));
+                                      MyWebView(item['url'], item['title'])));
                         },
                         child: Container(
                           margin: EdgeInsets.all(5.0),

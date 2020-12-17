@@ -14,4 +14,15 @@ final List<Map<String, String>> tvList = [
     'img': 'assets/img/youtube.jpeg',
     'url': 'https://www.youtube.com/'
   },
+  {
+    'title': 'Rang Dhanu',
+    'img': 'assets/img/5.jpg',
+    'url': 'http://tv.rangdhanu.live'
+  },
+  {'title': 'BD iptv', 'img': 'assets/img/4.jpg', 'url': 'http://bdiptv.net'},
+  {
+    'title': 'Jago BD',
+    'img': 'assets/img/3.jpg',
+    'url': 'http://www.jagobd.com'
+  },
 ];
