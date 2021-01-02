@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:named_route/auth/login.dart';
 
 class HomePage extends StatelessWidget {
   @override
@@ -9,13 +8,18 @@ class HomePage extends StatelessWidget {
       appBar: AppBar(
         title: Text('home'),
       ),
-      body: Row(
-        children: [
-          RaisedButton(
-            child: Text('Go to login'),
-            onPressed: () async {},
-          )
-        ],
+      body: Center(
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            RaisedButton(
+              child: Text('Go to login'),
+              onPressed: () {
+                Get.toNamed('/login');
+              },
+            )
+          ],
+        ),
       ),
     );
   }
