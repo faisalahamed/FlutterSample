@@ -20,7 +20,11 @@ class MyApp extends StatelessWidget {
       getPages: [
         GetPage(name: '/', page: () => HomePage()),
         GetPage(name: '/login', page: () => LoginPage()),
-        GetPage(name: '/dashboard', page: () => Dashboard()),
+        GetPage(
+          name: '/dashboard',
+          page: () => Dashboard(),
+          transition: Transition.zoom,
+        ),
         GetPage(name: '/dashboard/:token', page: () => Dashboard()),
       ],
       unknownRoute: GetPage(name: '/unknown', page: () => ErrorPage()),

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:named_route/dashboard/dashboard.dart';
 
 class LoginPage extends StatelessWidget {
   @override
