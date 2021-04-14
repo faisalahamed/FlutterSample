@@ -1,4 +1,7 @@
+library dashboard_card_button;
 import 'package:flutter/material.dart';
+
+/// A dashboard_card_button.
 
 class MyRaisedGradientButton extends StatelessWidget {
   final Gradient gradient;
