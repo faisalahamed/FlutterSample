@@ -2,9 +2,9 @@ import 'package:animations/animations.dart';
 import 'package:flutter/widgets.dart';
 
 class Routes {
-  static const String list = "list";
   static const String login = "/";
-  static const String home = "home";
+  static const String list = "list";
+  static const String dashboard = "dashboard";
 
   static Route<T> fadeThrough<T>(RouteSettings settings, WidgetBuilder page,
       {int duration = 300}) {

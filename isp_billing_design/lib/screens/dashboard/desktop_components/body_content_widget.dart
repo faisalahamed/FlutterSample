@@ -66,7 +66,7 @@ class _BodyContentWidgetState extends State<BodyContentWidget> {
                 color: Colors.indigo,
                 borderRadius: BorderRadius.all(Radius.circular(8))),
             child: Text(
-              "Customise Blocks",
+              "Settings",
               style: TextStyle(
                 color: Colors.white,
               ),

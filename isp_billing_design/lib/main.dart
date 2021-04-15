@@ -1,10 +1,10 @@
 // import 'package:dashboard_card_button/dashboard_card_button.dart';
 import 'package:flutter/material.dart';
 import 'package:isp_billing_design/routes.dart';
-import 'package:isp_billing_design/screens/dashboard/dashboard.dart';
 import 'package:isp_billing_design/screens/login/login.dart';
 import 'package:isp_billing_design/screens/my_list/my_list.dart';
-import 'package:isp_billing_design/widgets/main_layout.dart';
+
+import 'screens/dashboard/dashboard.dart';
 
 void main() {
   runApp(MyApp());
@@ -14,14 +14,15 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: LoginPage(),
-      initialRoute: Routes.home,
+      initialRoute: Routes.login,
       onGenerateRoute: (RouteSettings settings) {
         var itemNumber = settings.arguments;
         return Routes.fadeThrough(settings, (context) {
           switch (settings.name) {
-            case Routes.home:
-              return MainLayout();
+            case Routes.dashboard:
+              return DashboardPage();
             case Routes.list:
               return MyList(itemNumber);
             default:

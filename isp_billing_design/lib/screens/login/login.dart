@@ -5,14 +5,11 @@ class LoginPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      child: FlatButton(
-        onPressed: () => Navigator.pushNamed(context, Routes.home),
+      child: TextButton(
+        onPressed: () => Navigator.pushNamed(context, Routes.dashboard),
         child: Text(
           "Login",
         ),
-        splashColor: Colors.transparent,
-        hoverColor: Colors.transparent,
-        highlightColor: Colors.transparent,
       ),
     );
   }

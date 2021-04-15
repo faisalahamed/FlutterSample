@@ -1,5 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:isp_billing_design/repository/nav_bar_item.dart';
+
+import '../../../routes.dart';
 
 class WebVerticalNavWidget extends StatefulWidget {
   @override
@@ -13,7 +16,7 @@ class _WebVerticalNavWidgetState extends State<WebVerticalNavWidget> {
   Widget build(BuildContext context) {
     return Container(
       padding: EdgeInsets.symmetric(vertical: 25),
-      width: 70,
+      width: 110,
       height: MediaQuery.of(context).size.height,
       decoration: BoxDecoration(
         color: Colors.white,
@@ -26,9 +29,10 @@ class _WebVerticalNavWidgetState extends State<WebVerticalNavWidget> {
         ],
       ),
       child: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        mainAxisAlignment: MainAxisAlignment.start,
         children: [
           _logoWidget(),
+          SizedBox(height: 20),
           _colButtons(),
           _logoutButton(),
         ],
@@ -44,12 +48,22 @@ class _WebVerticalNavWidgetState extends State<WebVerticalNavWidget> {
     );
   }
 
-  Widget _colSingleButton({IconData icon, Color borderColor,Color iconColor}) {
+  Widget _colSingleButton(
+      {IconData icon, Color borderColor, Color iconColor, String title}) {
     return Padding(
       padding: const EdgeInsets.only(bottom: 35),
       child: Container(
-        width: 70,
-        child: Icon(icon,color: iconColor,),
+        width: 100,
+        child: Row(
+          children: [
+            Icon(
+              icon,
+              color: iconColor,
+            ),
+            SizedBox(width: 10),
+            Text(title)
+          ],
+        ),
         decoration: BoxDecoration(
           border: Border(
             right: BorderSide(
@@ -67,19 +81,22 @@ class _WebVerticalNavWidgetState extends State<WebVerticalNavWidget> {
       child: Column(
         children: [
           InkWell(
-              onTap: () {
-                setState(() {
-                  _buttonCurrentIndex = 0;
-                });
-              },
-              child: _colSingleButton(
-                  icon: Icons.widgets,
-                  iconColor: _buttonCurrentIndex == 0
-                      ? Colors.indigo
-                      : Colors.black,
-                  borderColor: _buttonCurrentIndex == 0
-                      ? Colors.deepOrange
-                      : Colors.transparent)),
+            onTap: () {
+              setState(() {
+                _buttonCurrentIndex = 0;
+                Navigator.pushNamed(context, Routes.list,
+                    arguments: {'itemNumber': 23});
+              });
+            },
+            child: _colSingleButton(
+                title: navBarItem[0],
+                icon: Icons.widgets,
+                iconColor:
+                    _buttonCurrentIndex == 0 ? Colors.indigo : Colors.black,
+                borderColor: _buttonCurrentIndex == 0
+                    ? Colors.deepOrange
+                    : Colors.transparent),
+          ),
           InkWell(
               onTap: () {
                 setState(() {
@@ -87,10 +104,10 @@ class _WebVerticalNavWidgetState extends State<WebVerticalNavWidget> {
                 });
               },
               child: _colSingleButton(
+                  title: navBarItem[1],
                   icon: Icons.score,
-                  iconColor: _buttonCurrentIndex == 1
-                      ? Colors.indigo
-                      : Colors.black,
+                  iconColor:
+                      _buttonCurrentIndex == 1 ? Colors.indigo : Colors.black,
                   borderColor: _buttonCurrentIndex == 1
                       ? Colors.deepOrange
                       : Colors.transparent)),
@@ -101,10 +118,10 @@ class _WebVerticalNavWidgetState extends State<WebVerticalNavWidget> {
               });
             },
             child: _colSingleButton(
+                title: navBarItem[2],
                 icon: Icons.calendar_today,
-                iconColor: _buttonCurrentIndex == 2
-                    ? Colors.indigo
-                    : Colors.black,
+                iconColor:
+                    _buttonCurrentIndex == 2 ? Colors.indigo : Colors.black,
                 borderColor: _buttonCurrentIndex == 2
                     ? Colors.deepOrange
                     : Colors.transparent),
@@ -116,10 +133,10 @@ class _WebVerticalNavWidgetState extends State<WebVerticalNavWidget> {
               });
             },
             child: _colSingleButton(
+                title: navBarItem[3],
                 icon: Icons.pages,
-                iconColor: _buttonCurrentIndex == 3
-                    ? Colors.indigo
-                    : Colors.black,
+                iconColor:
+                    _buttonCurrentIndex == 3 ? Colors.indigo : Colors.black,
                 borderColor: _buttonCurrentIndex == 3
                     ? Colors.deepOrange
                     : Colors.transparent),
@@ -131,10 +148,10 @@ class _WebVerticalNavWidgetState extends State<WebVerticalNavWidget> {
               });
             },
             child: _colSingleButton(
+                title: navBarItem[4],
                 icon: Icons.message,
-                iconColor: _buttonCurrentIndex == 4
-                    ? Colors.indigo
-                    : Colors.black,
+                iconColor:
+                    _buttonCurrentIndex == 4 ? Colors.indigo : Colors.black,
                 borderColor: _buttonCurrentIndex == 4
                     ? Colors.deepOrange
                     : Colors.transparent),
@@ -146,10 +163,10 @@ class _WebVerticalNavWidgetState extends State<WebVerticalNavWidget> {
               });
             },
             child: _colSingleButton(
+                title: navBarItem[5],
                 icon: Icons.settings,
-                iconColor: _buttonCurrentIndex == 5
-                    ? Colors.indigo
-                    : Colors.black,
+                iconColor:
+                    _buttonCurrentIndex == 5 ? Colors.indigo : Colors.black,
                 borderColor: _buttonCurrentIndex == 5
                     ? Colors.deepOrange
                     : Colors.transparent),
