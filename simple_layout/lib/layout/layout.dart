@@ -11,6 +11,7 @@ class LayoutPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ScreenTypeLayout(
+      breakpoints: ScreenBreakpoints(tablet: 600, desktop: 950, watch: 300),
       desktop: LayoutDesktop(child),
       tablet: LayoutTablet(child),
       mobile: LayoutMobile(child),
