@@ -1,0 +1,31 @@
+void main() {
+
+  var ob1=A(name:'hello');
+  var ob2=A(name:'hello2');
+  var ob3=A(name:'hello3');
+  
+  
+  ob1.changeToughness(23);
+  ob1.getToughness();
+  ob2.changeToughness(2);
+  ob2.getToughness();
+  ob1.getToughness();
+  ob2.getToughness();
+  ob3.getToughness();
+}
+
+class A {
+   String name;
+  static var toughness;
+  A({required this.name});
+  
+  changeToughness(int val){
+    toughness=val;
+    return toughness;
+  }
+  
+  getToughness(){
+    print('$toughness $name');
+    
+  }
+}
